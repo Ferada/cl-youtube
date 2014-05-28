@@ -1,0 +1,17 @@
+----------------
+-- cl-youtube --
+----------------
+
+A Common Lisp wrapper around the YouTube web service.
+
+http://www.youtube.com
+
+
+
+
+Local variables:
+mode: outline
+paragraph-separate: "[  ^L]*$"
+end:
+
+

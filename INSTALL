@@ -1,0 +1,80 @@
+----------------
+-- cl-youtube --
+----------------
+
+
+** Required softwares **
+
+  You will need :
+
+  - ASDF : http://www.cliki.net/asdf
+  - drakma : http://weitz.de/drakma/
+
+
+
+** Youtube developper profile **
+
+   Creates a new software developer profile :
+
+   http://www.youtube.com/my_profile_dev
+
+
+
+** ASDF **
+
+  In /usr/share/common-lisp/systems, create a symbolic link
+  to the system definition file (cl-youtube.asd)
+  or
+  add the cl-youtube directory to *central-directory* of ASDF :
+  CL-USER> (push "/directory/cl-youtube/" asdf:*central-registry*)
+
+
+
+** Load **
+
+  In the Lisp system :
+  CL-USER> (asdf:operate 'asdf:load-op :cl-youtube)
+
+** API **
+
+* Creates the YouTube client *
+
+  CL-USER> (defparameter *youtube* (cl-youtube:make-youtube-client "9V3oHwTEsrk"))
+  #<CL-YOUTUBE:YOUTUBE-CLIENT {B7F6EB9}>
+
+* View informations about a profile *
+
+  CL-USER> (cl-youtube:get-user-profile *youtube* "perave") 
+  #<CL-YOUTUBE:YOUTUBE-PROFILE {AB08FA9}> 
+
+  CL-USER> (inspect *)
+The object is a STANDARD-OBJECT of type CL-YOUTUBE:YOUTUBE-PROFILE.  
+0. FIRST-NAME: NIL 
+1. LAST-NAME: NIL 
+2. ABOUT-ME: NIL 
+3. AGE: "29" 
+4. VIDEO-UPLOAD-COUNT: "0" 
+5. VIDEO-WATCH-COUNT: "166" 
+6. HOMEPAGE: NIL 
+7. HOMETOWN: NIL 
+8. GENDER: "m" 
+9. OCCUPATIONS: NIL 
+10. COMPANIES: NIL 
+11. CITY: NIL 
+12. COUNTRY: "FR" 
+13. BOOKS: NIL 
+14. HOBBIES: NIL 
+15. MOVIES: NIL 
+16. RELATIONSHIP: NIL 
+17. FRIEND-COUNT: "0" 
+18. FAVORITE-VIDEO-COUNT: "0" 
+19. CURRENTLY-ON: "false" 
+
+
+
+
+
+Local variables:
+mode: outline
+paragraph-separate: "[  ^L]*$"
+end:

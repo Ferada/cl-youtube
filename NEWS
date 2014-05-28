@@ -1,0 +1,33 @@
+----------------
+-- cl-youtube --
+----------------
+
+* YoutTube objects *
+  Creates CLOS representation of the YouTube API.
+
+* XML output *
+  The call to the REST API return an XML object.
+
+
+
+** Version 0.1 **
+
+* Implements the REST api for User informations *
+
+    * youtube.users.get_profile
+    * youtube.users.list_favorite_videos
+    * youtube.users.list_friends
+
+* Implements the REST api for Video Viewing *
+
+    * youtube.videos.get_details
+    * youtube.videos.list_by_tag (now with paging)
+    * youtube.videos.list_by_user
+    * youtube.videos.list_featured
+
+
+
+Local variables:
+mode: outline
+paragraph-separate: "[  ^L]*$"
+end:
